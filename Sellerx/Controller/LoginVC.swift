@@ -7,24 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func forgotPassClicked(_ sender: Any) {
+    }
+    
+    @IBAction func loginClicked(_ sender: Any) {
+        
+        guard let email = emailTxt.text, email.isNotEmpety else {return}
+        guard let password = passwordTxt.text, password.isNotEmpety else {return}
+        
+        activityIndicator.startAnimating()
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                debugPrint(error)
+                self.activityIndicator.stopAnimating()
+            }
+            self.activityIndicator.stopAnimating()
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+    @IBAction func guestClicked(_ sender: Any) {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
