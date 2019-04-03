@@ -56,9 +56,23 @@ class RegisterVC: UIViewController {
     
     //MARK: - Creating user
     @IBAction func registerClicked(_ sender: Any) {
-        guard let email = emailTxt.text, email.isNotEmpety else {return}
-        guard let username = usernameTxt.text, username.isNotEmpety else {return}
-        guard let password = passwordTxt.text,  password.isNotEmpety else {return}
+        guard let email = emailTxt.text, email.isNotEmpety else {
+            simpleAlert(title: "Error", message: "Please fill out e-mail field.")
+            return
+        }
+        guard let username = usernameTxt.text, username.isNotEmpety else {
+            simpleAlert(title: "Error", message: "Please fill out username field.")
+            return
+        }
+        guard let password = passwordTxt.text,  password.isNotEmpety else {
+            simpleAlert(title: "Error", message: "Please fill out password field.")
+            return
+        }
+        
+        guard let confirmPass = confirmPassTxt.text, confirmPass == password else {
+            simpleAlert(title: "Error", message: "Passwords do not match.")
+            return
+        }
         
         activityIndicator.startAnimating()
         
@@ -67,6 +81,7 @@ class RegisterVC: UIViewController {
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
         authUser.linkAndRetrieveData(with: credential) { (result, error) in
             if let error = error {
+                self.handleFireAuthError(error: error)
                 debugPrint(error)
                 return
             }

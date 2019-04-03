@@ -26,15 +26,24 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClicked(_ sender: Any) {
         
-        guard let email = emailTxt.text, email.isNotEmpety else {return}
-        guard let password = passwordTxt.text, password.isNotEmpety else {return}
+        guard let email = emailTxt.text, email.isNotEmpety else {
+            simpleAlert(title: "Error", message: "Please fill out e-mail field")
+            return
+        }
+        guard let password = passwordTxt.text, password.isNotEmpety else {
+            simpleAlert(title: "Error", message: "Please fill out password field")
+            return
+        }
         
         activityIndicator.startAnimating()
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 debugPrint(error)
+                self.handleFireAuthError(error: error)
+                
                 self.activityIndicator.stopAnimating()
+                return
             }
             self.activityIndicator.stopAnimating()
             self.dismiss(animated: true, completion: nil)
@@ -44,7 +53,4 @@ class LoginVC: UIViewController {
     
     @IBAction func guestClicked(_ sender: Any) {
     }
-    
-
-
 }
