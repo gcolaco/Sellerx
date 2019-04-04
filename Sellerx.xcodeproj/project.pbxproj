@@ -26,6 +26,10 @@
 		7208A6AD2253E68200E99990 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A6AC2253E68200E99990 /* Extensions.swift */; };
 		7208A6AF2253EC5700E99990 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A6AE2253EC5700E99990 /* Constants.swift */; };
 		7208A6B22253F2C100E99990 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A6B12253F2C100E99990 /* RoundedViews.swift */; };
+		7224F74322554F1800ED95A5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F74122554F1800ED95A5 /* ForgotPasswordVC.swift */; };
+		7224F74422554F1800ED95A5 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7224F74222554F1800ED95A5 /* ForgotPasswordVC.xib */; };
+		7224F7462255A9FD00ED95A5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */; };
+		7224F7472255AAA800ED95A5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */; };
 		C381855057D7AA0C9381A933 /* Pods_SellerxAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D35D5994359FBCE116C680C /* Pods_SellerxAdmin.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,9 @@
 		7208A6AC2253E68200E99990 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7208A6AE2253EC5700E99990 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7208A6B12253F2C100E99990 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		7224F74122554F1800ED95A5 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		7224F74222554F1800ED95A5 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		7397A67996DD87DE7E07CF90 /* Pods-SellerxAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellerxAdmin.release.xcconfig"; path = "Target Support Files/Pods-SellerxAdmin/Pods-SellerxAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		770E2F069C5333F1E14810AA /* Pods-Sellerx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sellerx.debug.xcconfig"; path = "Target Support Files/Pods-Sellerx/Pods-Sellerx.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3BE22586E3B86D3BD3F143 /* Pods_Sellerx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sellerx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +130,7 @@
 		7208A670224E9E0C00E99990 /* Sellerx */ = {
 			isa = PBXGroup;
 			children = (
+				7224F74022554EF900ED95A5 /* XIBs */,
 				7208A6A52253D01C00E99990 /* Model */,
 				7208A6A42253D01700E99990 /* View */,
 				7208A6A32253D00D00E99990 /* Controller */,
@@ -196,6 +204,7 @@
 			children = (
 				7208A6AC2253E68200E99990 /* Extensions.swift */,
 				7208A6AE2253EC5700E99990 /* Constants.swift */,
+				7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,6 +215,15 @@
 				7208A6B12253F2C100E99990 /* RoundedViews.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7224F74022554EF900ED95A5 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				7224F74122554F1800ED95A5 /* ForgotPasswordVC.swift */,
+				7224F74222554F1800ED95A5 /* ForgotPasswordVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +313,7 @@
 				7208A679224E9E0D00E99990 /* Assets.xcassets in Resources */,
 				7208A6A02253ACF200E99990 /* GoogleService-Info.plist in Resources */,
 				7208A677224E9E0C00E99990 /* Main.storyboard in Resources */,
+				7224F74422554F1800ED95A5 /* ForgotPasswordVC.xib in Resources */,
 				7208A69C224EC00700E99990 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +451,6 @@
 				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -452,7 +470,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -466,12 +483,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7224F7462255A9FD00ED95A5 /* Firebase+Utils.swift in Sources */,
 				7208A6AD2253E68200E99990 /* Extensions.swift in Sources */,
 				7208A674224E9E0C00E99990 /* HomeVC.swift in Sources */,
 				7208A6AA2253D09F00E99990 /* RegisterVC.swift in Sources */,
 				7208A672224E9E0C00E99990 /* AppDelegate.swift in Sources */,
 				7208A6B22253F2C100E99990 /* RoundedViews.swift in Sources */,
 				7208A6A82253D07E00E99990 /* LoginVC.swift in Sources */,
+				7224F74322554F1800ED95A5 /* ForgotPasswordVC.swift in Sources */,
 				7208A6AF2253EC5700E99990 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7224F7472255AAA800ED95A5 /* Firebase+Utils.swift in Sources */,
 				7208A68C224E9E2200E99990 /* ViewController.swift in Sources */,
 				7208A68A224E9E2200E99990 /* AppDelegate.swift in Sources */,
 			);
@@ -647,6 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBXA6XL8QB;
 				INFOPLIST_FILE = Sellerx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,6 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBXA6XL8QB;
 				INFOPLIST_FILE = Sellerx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBXA6XL8QB;
 				INFOPLIST_FILE = SellerxAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -704,6 +727,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBXA6XL8QB;
 				INFOPLIST_FILE = SellerxAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -81,7 +81,7 @@ class RegisterVC: UIViewController {
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
         authUser.linkAndRetrieveData(with: credential) { (result, error) in
             if let error = error {
-                self.handleFireAuthError(error: error)
+                Auth.auth().handleFireAuthError(error: error, viewController: self)
                 debugPrint(error)
                 return
             }
