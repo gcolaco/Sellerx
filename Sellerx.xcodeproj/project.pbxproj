@@ -30,6 +30,8 @@
 		7224F74422554F1800ED95A5 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7224F74222554F1800ED95A5 /* ForgotPasswordVC.xib */; };
 		7224F7462255A9FD00ED95A5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */; };
 		7224F7472255AAA800ED95A5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */; };
+		72AFBA1A225F855200F0A0C6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AFBA19225F855200F0A0C6 /* Category.swift */; };
+		72AFBA1B225F855200F0A0C6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AFBA19225F855200F0A0C6 /* Category.swift */; };
 		C381855057D7AA0C9381A933 /* Pods_SellerxAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D35D5994359FBCE116C680C /* Pods_SellerxAdmin.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 		7224F74122554F1800ED95A5 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		7224F74222554F1800ED95A5 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		7224F7452255A9FD00ED95A5 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
+		72AFBA19225F855200F0A0C6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7397A67996DD87DE7E07CF90 /* Pods-SellerxAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellerxAdmin.release.xcconfig"; path = "Target Support Files/Pods-SellerxAdmin/Pods-SellerxAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		770E2F069C5333F1E14810AA /* Pods-Sellerx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sellerx.debug.xcconfig"; path = "Target Support Files/Pods-Sellerx/Pods-Sellerx.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3BE22586E3B86D3BD3F143 /* Pods_Sellerx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sellerx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				7224F74022554EF900ED95A5 /* XIBs */,
-				7208A6A52253D01C00E99990 /* Model */,
 				7208A6A42253D01700E99990 /* View */,
 				7208A6A32253D00D00E99990 /* Controller */,
 				7208A6A62253D02700E99990 /* Storyboards */,
@@ -157,6 +159,7 @@
 		7208A699224E9E3300E99990 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7208A6A52253D01C00E99990 /* Model */,
 				7208A6B02253F2AC00E99990 /* View */,
 				7208A6AB2253E67400E99990 /* Utils */,
 				7208A678224E9E0D00E99990 /* Assets.xcassets */,
@@ -185,6 +188,7 @@
 		7208A6A52253D01C00E99990 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72AFBA19225F855200F0A0C6 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -484,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7224F7462255A9FD00ED95A5 /* Firebase+Utils.swift in Sources */,
+				72AFBA1A225F855200F0A0C6 /* Category.swift in Sources */,
 				7208A6AD2253E68200E99990 /* Extensions.swift in Sources */,
 				7208A674224E9E0C00E99990 /* HomeVC.swift in Sources */,
 				7208A6AA2253D09F00E99990 /* RegisterVC.swift in Sources */,
@@ -502,6 +507,7 @@
 				7224F7472255AAA800ED95A5 /* Firebase+Utils.swift in Sources */,
 				7208A68C224E9E2200E99990 /* ViewController.swift in Sources */,
 				7208A68A224E9E2200E99990 /* AppDelegate.swift in Sources */,
+				72AFBA1B225F855200F0A0C6 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

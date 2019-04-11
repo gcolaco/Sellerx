@@ -17,7 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="SUF-B9-dde">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yYV-si-ihl">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mhn-CK-aa1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-9m-OTk">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.90136316869999999" green="0.38074234499999998" blue="0.3047724107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yYV-si-ihl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3no-P0-8dB"/>
+                            <constraint firstItem="SUF-B9-dde" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cz9-D1-y4G"/>
+                            <constraint firstItem="yGb-9m-OTk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lm3-Gy-RcG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yYV-si-ihl" secondAttribute="trailing" constant="20" id="QQv-tx-BdZ"/>
+                            <constraint firstItem="yGb-9m-OTk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VQM-Pt-Reg"/>
+                            <constraint firstItem="SUF-B9-dde" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vaa-rl-xGk"/>
+                            <constraint firstItem="yYV-si-ihl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W9h-93-F7f"/>
+                            <constraint firstItem="SUF-B9-dde" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zh9-dJ-KJ2"/>
+                            <constraint firstAttribute="bottom" secondItem="SUF-B9-dde" secondAttribute="bottom" id="aw0-fd-dWl"/>
+                            <constraint firstAttribute="bottom" secondItem="yYV-si-ihl" secondAttribute="bottom" id="t4W-dv-MJQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="fA5-mt-J49">
@@ -28,12 +60,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="yGb-9m-OTk" id="Et8-eO-cMr"/>
+                        <outlet property="collectionView" destination="yYV-si-ihl" id="3Qt-Ba-6vu"/>
                         <outlet property="loginOutBtn" destination="jgk-Wl-pn9" id="xM9-HY-Jml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="-542"/>
+            <point key="canvasLocation" x="928.98550724637687" y="-542.41071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KV4-SJ-rgH">
@@ -54,4 +88,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="-542.41071428571422"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_cat3" width="1500" height="1875"/>
+    </resources>
 </document>
